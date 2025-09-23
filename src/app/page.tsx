@@ -15,7 +15,7 @@ export const generateMetadata = (): Metadata => {
   return {
     title: '2025年ミスヘブン総選挙応援キャンペーン',
     description: isRealProduction
-      ? '2025年ミスヘブン総選挙応援キャンペーンのディスクリプション'
+      ? '2025年ミスヘブン総選挙 応援キャンペーン開催中！地方予選 ⇒ 本選の投票期間あり。投票者には投票数に応じて最大20,000ポイントプレゼント。投票チケット取得方法や参加条件はサイトでチェック。'
       : undefined,
   };
 };

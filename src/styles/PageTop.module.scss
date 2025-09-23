@@ -1,5 +1,5 @@
 /* =================================
- * 	リタワーク TOPページ
+ * 	2025年ミスヘブン総選挙応援キャンペーン TOPページ
  * ------------------------------ */
 @use "variable" as *;
 @use "svg" as *;
@@ -8,461 +8,444 @@
 /* stylelint-disable keyframes-name-pattern */
 /* stylelint-disable custom-property-pattern */
 // このファイル全体のルールを無効にする
-.btnLink {
-    position: relative;
-    background-color: $main-orange;
-    color: $base-white;
-    align-self: center;
-    width: 17.5em;
-    height: 3em;
-    font-size: inherit;
-    @include flex-center;
-    border-radius: $radius14;
-    border-top-left-radius: unset;
-    @include box-shadow;
+
+/* =================================
+ * HEAD
+ * ------------------------------ */
+.itemH1 {
+    display: inline-block;
+    text-align: center;
+    background-color: $base-black;
+    font-size: FZ(16);
+    letter-spacing: 0.04em;
+    padding-block: 0.3em;
+    z-index: 2;
+}
+.containerHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 2vw 3em;
+    @include sp {
+        padding: 8vw 4vw 6vw;
+    }
     &::before {
         content: "";
         position: absolute;
-        top: 0;
-        right: 100%;
-        width: 5px;
-        @include svg-object-radius("f29400");
-    }
-    span {
-        font-size: FZ(16);
-        font-weight: 700;
-    }
-}
-.boxH2 {
-    position: relative;
-    display: flex;
-    font-size: inherit;
-    gap: 0 2em;
-    color: $font-black;
-    align-items: flex-end;
-    h2 {
-        position: relative;
-        font-size: FZ(24);
-        padding-left: 1.8em;
-        width: max-content;
-        &::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            translate: 0 -50%;
-            left: 0;
+        top: -10em;
+        right: 85%;
+        width: 25vw;
+        background: url("../images/object-wing.webp") no-repeat center center /
+            contain;
+        aspect-ratio: 600/1354;
+        z-index: 1;
+        @include sp {
+            width: 40vw;
+            right: 80%;
+            top: -20vw;
         }
     }
-    p {
-        flex: 1;
-        font-size: FZ(16);
-        font-weight: 300;
-        line-height: 1.6em;
-    }
-}
-
-/* =================================
- * HERO
- * ------------------------------ */
-.containerHero {
-    aspect-ratio: 1900/1113;
-    max-height: 798px;
-    background-color: $bg-white;
-    .boxImage {
-        position: absolute;
-        left: 0;
-        top: 0;
-        font-size: inherit;
-        width: 100%;
-        &::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            @include bottom-radius($radius80);
-            background: url("../assets/images/bg.webp") repeat center
-                center/contain;
-            mix-blend-mode: color-dodge;
-            z-index: 1;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            border-bottom: 1px solid rgba(#fff, 0.7);
-            border-left: 1px solid rgba(#fff, 0.7);
-            border-right: 1px solid rgba(#fff, 0.7);
-            inset: 0 1rem 1rem;
-
-            // border-bottom-left-radius: calc($radius80 - 1rem);
-            // border-bottom-right-radius: calc($radius80 - 1rem);
-            @include bottom-radius($radius80);
-        }
-        img {
-            font-size: inherit;
-            position: relative;
-            width: 100%;
-            height: 100%;
-            @include bottom-radius($radius80);
-            max-height: 798px;
-            object-fit: cover;
-        }
-    }
-    .boxLogo {
-        position: absolute;
-        top: 22%;
-        left: 70%;
-        translate: -50%;
-        font-size: inherit;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        svg {
-            font-size: inherit;
-            width: 18.56em;
-            fill: #fff;
-            aspect-ratio: 297/72;
-        }
-        p {
-            font-size: FZ(14);
-            color: #fff;
-            letter-spacing: 0.06em;
-            text-align: center;
-            margin-top: 0.8em;
-        }
-    }
-}
-
-/* =================================
- * 求人を検索
- * ------------------------------ */
-.containerSearch {
-    @include flex-center;
-    padding-inline: 4vw;
-    background-color: $bg-white;
-    z-index: 1;
     article {
         display: flex;
         flex-direction: column;
+        align-items: center;
         max-width: $articleMaxWidth;
-        --padding-inline: 2em;
-        margin-bottom: -7.5em;
-        translate: 0 -7.5em;
-        .boxTop {
-            background-color: $bg-white;
-            position: relative;
-            font-size: inherit;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            gap: 0 0.8em;
-            padding: 0.8em var(--padding-inline);
-            @include top-radius($radius24);
-            .wrapTitle {
-                position: relative;
-                font-size: inherit;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                padding-top: 1em;
-                gap: 0.5em 0;
-                h2 {
-                    font-size: FZ(20);
-                    color: $font-black;
-                    position: relative;
-                    padding-left: 1.8em;
-                    font-weight: 500;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        translate: 0 -50%;
-                        left: 0;
-                        width: 1.4em;
-                        @include svg-icon-loupe($color-orange);
-                    }
-                }
-                .itemCount {
-                    color: $font-black;
-                    font-size: FZ(20);
-                    display: flex;
-                    align-items: flex-end;
-                    &::before,
-                    &::after {
-                        font-size: 0.6em;
-                        line-height: 1.82em;
-                    }
-                    &::before {
-                        content: "掲載：";
-                    }
-                    &::after {
-                        content: "件";
-                        margin-left: 0.3em;
-                    }
-                }
-            }
-            ul {
-                position: relative;
-                font-size: inherit;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.5em;
-                flex: 1;
-                margin-left: 1.6em;
-                li {
-                    position: relative;
-                    font-size: inherit;
-                    background-color: #fff;
-                    @include box-shadow;
-                    border-radius: $radius14;
-                    display: flex;
-                    align-items: center;
-                    padding-left: 1.6em;
-                    cursor: pointer;
-                    h3 {
-                        position: relative;
-                        font-size: FZ(14);
-                        color: $font-black;
-                        padding-left: 2.4em;
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            left: 0;
-                            top: 50%;
-                            translate: 0 -50%;
-                        }
-                    }
-                    &:nth-of-type(1) {
-                        h3 {
-                            &::before {
-                                width: 1.6em;
-                                @include svg-icon-search01($color-orange);
-                            }
-                        }
-                    }
-                    &:nth-of-type(2) {
-                        h3 {
-                            &::before {
-                                width: 1.25em;
-                                @include svg-icon-search02($color-orange);
-                            }
-                        }
-                    }
-                    &:nth-of-type(3) {
-                        h3 {
-                            &::before {
-                                width: 1.65em;
-                                @include svg-icon-search03($color-orange);
-                            }
-                        }
-                    }
-                    &:nth-of-type(4) {
-                        h3 {
-                            &::before {
-                                width: 1.42em;
-                                @include svg-icon-search04($color-orange);
-                            }
-                        }
-                    }
-                }
-            }
-            .btnSearch {
-                position: relative;
-                font-size: inherit;
-                @include flex-center;
-                background-color: $main-orange;
-                color: #fff;
-                width: 5.875em;
-                aspect-ratio: 1;
-                border-radius: $radius14;
-                border-top-left-radius: unset;
-                @include box-shadow;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    right: 100%;
-                    width: 5px;
-                    @include svg-object-radius("f29400");
-                }
-                span {
-                    font-size: FZ(14);
-                    font-weight: 700;
-                }
-            }
-            .btnReset {
-                font-size: inherit;
-                @include flex-center;
-                width: 4em;
-                min-width: 6rem;
-                background-color: #fff;
-                height: 3.5em;
-                @include box-shadow;
-                border-radius: $radius14;
-                align-self: flex-end;
-                span {
-                    font-size: FZ(12);
-                    font-weight: 500;
-                    color: $font-black;
-                    display: inline-block;
-                    width: max-content;
-                }
+    }
+    .blockTop {
+        &::before {
+            content: "";
+            position: fixed;
+            top: 10em;
+            left: 70%;
+            width: 24vw;
+            background: url("../images/object-feather.webp") no-repeat center
+                center/contain;
+            aspect-ratio: 300/269;
+            z-index: 2;
+            @include sp {
+                width: 30vw;
+                left: 80%;
+                top: 20vw;
             }
         }
-        .boxBottom {
+        .titleImage {
+            width: 100%;
+        }
+        .headTitle {
+            font-size: FZ(64);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            gap: 0.1em;
+            margin-top: 0.5em;
+            @include sp {
+                font-size: FZ(48);
+            }
+            span {
+                font-size: 0.375em;
+                font-weight: 500;
+                letter-spacing: 0.2em;
+            }
+        }
+        .boxPoint {
             position: relative;
             font-size: inherit;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            background-color: $main-orange;
-            align-items: center;
-            gap: 0 1.4em;
-            padding: 0.8em var(--padding-inline);
-            @include bottom-radius($radius24);
-            .itemInput {
+            margin-top: 2em;
+            @include sp {
+                margin-top: 30vw;
+            }
+            .number {
                 position: relative;
-                flex: 1;
-                background-color: #fff;
-                border-radius: $radius14;
-                height: 2.75em;
-                display: flex;
-                align-items: center;
-                font-size: inherit;
-                @include box-shadow;
-                padding-left: 3em;
+                @include FuturaHeavyOblique;
+                font-size: FZ(140);
+                display: inline-block;
+                background: linear-gradient(
+                    0deg,
+                    #ffe500 0%,
+                    rgba(#ffe500, 0) 80%,
+                    rgba(#ffe500, 0) 100%
+                );
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-color: $base-white;
+                @include sp {
+                    font-size: FZ(90);
+                }
+                &::after {
+                    content: "pt";
+                    font-size: 0.343em;
+                    color: $base-white;
+                    -webkit-text-fill-color: $base-white; // Safari対策
+                    background-clip: none;
+                }
                 &::before {
                     content: "";
                     position: absolute;
                     top: 50%;
                     translate: 0 -50%;
-                    left: 1.6em;
-                    width: 1em;
-                    @include svg-icon-building($color-orange);
-                    z-index: 1;
-                }
-                input {
-                    font-size: FZ(14);
-                    padding: 0.5em 1em;
-                    &::placeholder {
-                        color: rgba(#726b6299, 0.6);
+                    left: calc(100% - 0.2em);
+                    width: 1.6em;
+                    @include svg-text-get("E5009F");
+                    @include sp {
+                        width: 0.9em;
                     }
                 }
             }
-            button {
-                position: relative;
+            .wrapHead {
                 font-size: inherit;
-                width: 3.8rem;
+                position: absolute;
+                top: 45%;
+                translate: 0 -50%;
+                right: calc(100% + 0.1em);
+                width: 11em;
                 aspect-ratio: 1;
-                border-radius: 50%;
-                background-color: #fff;
-                @include box-shadow;
-                margin-right: 0.6em;
+                @include flex-center;
+                @include sp {
+                    top: unset;
+                    left: 50%;
+                    translate: -50%;
+                    bottom: calc(100% - 8vw);
+                    width: 25vw;
+                    z-index: -1;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    translate: -50%;
+                    top: -3.2em;
+                    background: url("../images/object-crown.webp") no-repeat
+                        center center / contain;
+                    aspect-ratio: 91/105;
+                    width: 50%;
+                    @include sp {
+                        width: 70%;
+                    }
+                }
                 &::before {
                     content: "";
                     position: absolute;
                     inset: 0;
-                    margin: auto;
-                    width: 45%;
-                    @include svg-icon-loupe($color-orange);
+                    background-color: $base-pink;
+                    mix-blend-mode: screen;
+                    opacity: 0.6;
+                    border-radius: 50%;
                 }
-            }
-        }
-    }
-}
-
-/* =================================
- * 積極採用企業
- * ------------------------------ */
-.containerPickUp {
-    @include flex-center;
-    background-color: $bg-white;
-    padding: 3em 4vw 0;
-    z-index: 2;
-    &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 5em;
-        @include bottom-radius($radius80);
-        background-color: $bg-white;
-        font-size: inherit;
-    }
-    article {
-        display: flex;
-        flex-direction: column;
-        max-width: $articleMaxWidth;
-        h2 {
-            &::before {
-                width: 1.25em;
-                top: 40%;
-                @include svg-object-fire($color-orange);
-            }
-        }
-        .listPickUp {
-            position: relative;
-            font-size: inherit;
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            margin-top: 2em;
-            gap: 1em;
-            .boxShop {
-                position: relative;
-                font-size: inherit;
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                @include box-shadow();
-                border-radius: $radius14;
-                .iconNew {
-                    position: absolute;
-                    top: -0.5em;
-                    left: -0.5em;
-                    font-size: inherit;
-                    width: 45px;
-                    height: 40px;
-                    @include flex-center;
-                    background-color: #d0442e;
-                    color: #fff;
-                    font-size: FZ(12);
-                    border-radius: 54px;
-                }
-                a {
-                    display: block;
-                    font-size: inherit;
-                    width: 100%;
-                    img {
-                        width: 100%;
-                        aspect-ratio: 218/130;
-                        object-fit: cover;
-                        font-size: inherit;
-                        @include top-radius();
+                span {
+                    font-size: FZ(48);
+                    font-weight: 700;
+                    @include sp {
+                        font-size: FZ(30);
                     }
                 }
-                .typeList {
-                    background-color: $sub-orange;
+            }
+        }
+        .textChance {
+            font-size: FZ(36);
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            display: inline-block;
+            translate: 0 -0.8em;
+            margin-bottom: -0.8em;
+            em {
+                font-size: 1.78em;
+                display: inline-block;
+                translate: 0 0.05em;
+                margin-inline: 0.1em;
+            }
+        }
+    }
+    .blockBottom {
+        flex-direction: row;
+        gap: 0 1.4em;
+        margin-top: 3em;
+        @include sp {
+            flex-direction: column;
+            gap: 6vw 0;
+        }
+        .boxPeriod {
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            background-color: rgba($base-black, 0.6);
+            border: 1px solid;
+            border-radius: 1rem;
+            padding: 2em 2em 1em;
+            gap: 1em 0;
+            @include sp {
+                padding: 4vw 4vw 2vw;
+                width: 100%;
+            }
+            h2 {
+                align-self: center;
+                font-size: FZ(20);
+                font-weight: 700;
+                letter-spacing: 0.4em;
+            }
+            dl {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                font-size: inherit;
+                gap: 0.5em 0;
+                dt {
+                    grid-column: span 2;
+                    background-color: $base-white;
+                    color: $base-black;
+                    font-size: FZ(16);
+                    font-weight: 700;
+                    padding: 0.5em 1em;
+                    @include sp {
+                        padding: 0.3em 4vw;
+                    }
+                }
+                dd {
+                    grid-column: span 2;
+                    display: grid;
+                    grid-template-columns: subgrid;
                     font-size: inherit;
-                    display: flex;
-                    justify-content: center;
-                    @include bottom-radius();
-                    li {
-                        padding-block: 0.9em;
-                        font-size: FZ(12);
-                        color: $font-black;
+                    time {
                         position: relative;
-                        padding-inline: 0.6em;
-                        &:not(:first-of-type) {
+                        font-size: inherit;
+                        display: flex;
+                        .month,
+                        .day {
+                            font-size: FZ(40);
+                            font-weight: 700;
+                            @include sp {
+                                font-size: FZ(36);
+                            }
+                        }
+                        .month {
+                            &::after {
+                                content: "月";
+                                font-size: 0.4em;
+                            }
+                        }
+                        .day {
+                            &::after {
+                                content: "日";
+                                font-size: 0.4em;
+                            }
+                        }
+                        .week {
+                            background-color: $base-white;
+                            color: $base-black;
+                            font-size: FZ(16);
+                            align-self: center;
+                            display: inline-block;
+                            padding: 0.2em;
+                            border-radius: 5px;
+                            font-weight: 700;
+                            margin-left: 0.2em;
+                            @include sp {
+                                font-size: FZ(14);
+                            }
+                        }
+                        .time {
+                            font-size: FZ(16);
+                            font-weight: 500;
+                            color: #fff9ba;
+                            align-self: center;
+                            letter-spacing: 0.12em;
+                            margin-left: 0.5em;
+                            display: inline-block;
+                            translate: 0 0.3em;
+                            @include sp {
+                                font-size: FZ(14);
+                                letter-spacing: 0.04em;
+                                translate: unset;
+                            }
+                            &::before {
+                                content: "[";
+                            }
+                            &::after {
+                                content: "~]";
+                            }
+                        }
+                        &:nth-of-type(2) {
+                            flex: 1;
+                            display: flex;
+                            justify-content: space-between;
+                            margin-left: 3em;
+                            @include sp {
+                                margin-left: 6vw;
+                            }
                             &::before {
                                 content: "";
                                 position: absolute;
-                                left: 0;
                                 top: 50%;
                                 translate: 0 -50%;
-                                width: 1px;
-                                height: 1em;
-                                background-color: #d6d6d6;
-                                mix-blend-mode: multiply;
+                                right: calc(100% + 0.7em);
+                                width: 1.5em;
+                                height: 2px;
+                                background-color: $base-white;
+                                @include sp {
+                                    width: 2vw;
+                                    right: calc(100% + 2vw);
+                                }
                             }
+                            .day {
+                                margin-left: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .boxDetails {
+            position: relative;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            font-size: inherit;
+            flex: 1;
+            gap: 1em;
+            .itemQr {
+                font-size: inherit;
+                width: 9.125em;
+                @include sp {
+                    display: none;
+                }
+            }
+            .wrapAnnounce {
+                display: flex;
+                flex-direction: column;
+                font-size: inherit;
+                @include sp {
+                    grid-column: span 2;
+                }
+                p {
+                    font-weight: 700;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: inherit;
+                    letter-spacing: 0.08em;
+                    @include sp {
+                        flex-direction: row;
+                        justify-content: center;
+                    }
+                    span {
+                        font-size: FZ(16);
+                        display: flex;
+                        align-items: center;
+                        .lastText {
+                            display: inline-block;
+                            translate: 0 0.3em;
+                        }
+                        time {
+                            position: relative;
+                            font-size: inherit;
+                            display: flex;
+                            margin-right: 0.5em;
+                            .month {
+                                font-size: FZ(40);
+                                font-weight: 700;
+                                &::after {
+                                    content: "月";
+                                    font-size: 0.4em;
+                                }
+                            }
+                            .day {
+                                font-size: FZ(40);
+                                font-weight: 700;
+                                &::after {
+                                    content: "日";
+                                    font-size: 0.4em;
+                                }
+                            }
+                            .week {
+                                background-color: $base-white;
+                                color: $base-black;
+                                font-size: FZ(16);
+                                align-self: center;
+                                display: inline-block;
+                                padding: 0.2em;
+                                border-radius: 5px;
+                                font-weight: 700;
+                                margin-left: 0.2em;
+                            }
+                        }
+                    }
+                }
+                a {
+                    align-self: flex-start;
+                    font-size: FZ(20);
+                    font-weight: 700;
+                    padding: 0.5em 2em;
+                    position: relative;
+                    letter-spacing: 0.08em;
+                    margin-bottom: 0.3em;
+                    z-index: 2;
+                    @include sp {
+                        width: 100%;
+                        text-align: center;
+                        padding: 0.8em 2em;
+                    }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        inset: 0;
+                        background-color: rgba($base-pink, 1);
+                        z-index: -1;
+                        mix-blend-mode: screen;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+            ul {
+                grid-column: span 2;
+                font-size: inherit;
+                display: flex;
+                flex-direction: column;
+                gap: 0.3em 0;
+                li {
+                    font-size: FZ(16);
+                    letter-spacing: 0.08em;
+                    font-weight: 600;
+                    &.mobile {
+                        @include sp {
+                            display: none;
                         }
                     }
                 }
@@ -472,200 +455,337 @@
 }
 
 /* =================================
- * 人気の条件
+ * ポイントゲット
  * ------------------------------ */
-.containerConditions {
-    @include flex-center;
-    background-color: $base-white;
-    padding: 9em 4vw 0;
-    article {
-        display: flex;
-        flex-direction: column;
-        max-width: $articleMaxWidth;
-        gap: 2em 0;
-        h2 {
-            padding-left: 2em;
-            &::before {
-                width: 1.7em;
-                top: 40%;
-                @include svg-object-star($color-orange);
-            }
-        }
-        .boxSlideList {
-            position: relative;
-
-            // &::before,
-            // &::after {
-            //     content: "";
-            //     position: absolute;
-            //     top: 0;
-            //     width: 5.5em;
-            //     height: 100%;
-            //     background-color: rgba($base-white, 0.7);
-            //     z-index: +2;
-            // }
-            // &::before {
-            //     left: 0;
-            // }
-            // &::after {
-            //     right: 0;
-            // }
-            div {
-                font-size: inherit;
-            }
-            button {
-                width: 100%;
-                aspect-ratio: 211/256;
-                font-size: inherit;
-                padding: 0.8em;
-                display: flex;
-                align-items: flex-end;
-                justify-content: center;
-                border-radius: $radius14;
-                @include box-shadow;
-                .label {
-                    width: 100%;
-                    @include flex-center;
-                    background-color: #4c6be8;
-                    font-size: FZ(16);
-                    color: $base-white;
-                    height: 2.4em;
-                    border-radius: $radius8;
-                }
-            }
-        }
-    }
-}
-
-/* =================================
- * 転職のヒント
- * ------------------------------ */
-.containerTips {
-    @include flex-center;
-    background-color: $base-white;
-    padding: 4em 4vw 0;
-    &::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 5em;
-        @include bottom-radius($radius80);
-        background-color: $base-white;
-        font-size: inherit;
-    }
-    article {
-        display: flex;
-        flex-direction: column;
-        max-width: $articleMaxWidth;
-        gap: 2em 0;
-        h2 {
-            padding-left: 2.2em;
-            &::before {
-                width: 1.7em;
-                top: 40%;
-                @include svg-object-book($color-orange);
-            }
-        }
-        ul {
-            position: relative;
-            font-size: inherit;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1em;
-            li {
-                position: relative;
-                aspect-ratio: 37/28;
-                font-size: inherit;
-                @include box-shadow;
-                border-radius: $radius14;
-                cursor: pointer;
-                img {
-                    font-size: inherit;
-                    width: 100%;
-                    border-radius: $radius14;
-                }
-            }
-        }
-    }
-}
-
-/* =================================
- * Message
- * ------------------------------ */
-.containerMessage {
-    padding: 10em 4vw 0;
-    z-index: 0;
-    @include flex-center;
-    &::before,
-    &::after {
-        content: "";
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        z-index: -1;
-        height: 100vh;
-        height: 100dvh;
+.containerPoint {
+    display: flex;
+    justify-content: center;
+    padding: 3em 2vw 2em;
+    @include sp {
+        padding: 8vw 4vw 6vw;
     }
     &::before {
-        background: url("../assets/images/bg-top-message.webp") no-repeat center
-            center / cover;
-        filter: blur(4px);
-        scale: 1.01;
-    }
-    &::after {
-        background-color: rgba(#fff, 0.3);
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: $base-pink;
+        mix-blend-mode: screen;
+        opacity: 0.5;
     }
     article {
-        max-width: 1032px;
         display: flex;
-        justify-content: space-between;
-        gap: 0 4em;
-        align-items: flex-start;
-        .itemImage {
-            flex: 1;
-            font-size: inherit;
-            overflow: hidden;
-            height: 37em;
-        }
-        .wrapMessage {
-            position: relative;
-            background-color: #fff;
-            color: $font-black;
-            font-size: inherit;
-
-            // width: 38.125em;
-            width: 58%;
+        flex-direction: column;
+        align-items: center;
+        max-width: $articleMaxWidth;
+        .boxHead {
             display: flex;
             flex-direction: column;
-            padding: 3em;
-            border-radius: 0 3.75em 3.75em;
-            margin-top: 2em;
-            @include box-shadow;
-            gap: 1em;
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                right: 100%;
-                width: 1.625em;
-                @include svg-object-radius("fff");
-            }
-            h2 {
-                font-size: FZ(24);
-                color: $main-orange;
-                font-weight: 500;
-                text-transform: capitalize;
+            align-items: center;
+            font-size: inherit;
+            span {
+                font-size: FZ(64);
+                font-weight: 700;
+                @include sp {
+                    font-size: FZ(36);
+                }
+                em {
+                    display: inline-block;
+                    font-size: 1.5em;
+                    margin-right: 0.1em;
+                    background: linear-gradient(
+                        0deg,
+                        #ffe500 0%,
+                        rgba(#ffe500, 0) 60%,
+                        rgba(#ffe500, 0) 100%
+                    );
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-color: $base-white;
+                }
             }
             p {
-                font-size: FZ(16);
-                text-align: justify;
-                font-feature-settings: "palt";
-                line-height: 1.8em;
+                font-size: FZ(36);
+                font-weight: 700;
+                margin-top: 0.5em;
                 letter-spacing: 0.04em;
+                @include sp {
+                    font-size: FZ(20);
+                }
+            }
+        }
+        .listPoint {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+            font-size: inherit;
+            gap: 0 0.8em;
+            margin-top: 2em;
+            @include sp {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 4vw;
+                margin-top: 4vw;
+            }
+            li {
+                position: relative;
+                font-size: inherit;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: $base-white;
+                color: $base-black;
+                border-radius: 2rem;
+                padding: 2em 2em 1em;
+                @include sp {
+                    padding: 2vw;
+                }
+                .label {
+                    @include FuturaHeavyOblique;
+                    font-size: FZ(48);
+                    @include sp {
+                        font-size: FZ(42);
+                    }
+                    &::after {
+                        @include SunSerif;
+                        content: "票";
+                        font-size: 0.33em;
+                        margin-left: 0.2em;
+                        font-weight: 700;
+                    }
+                }
+                span {
+                    width: 100%;
+                    max-width: 156px;
+                    text-align: center;
+                    display: inline-block;
+                    position: relative;
+                    background-color: $base-pink;
+                    color: $base-white;
+                    font-size: FZ(16);
+                    font-weight: 600;
+                    letter-spacing: 0.08em;
+                    padding: 1em 0 0;
+                    margin-bottom: 2em;
+                    @include sp {
+                        max-width: unset;
+                        width: 30vw;
+                        margin-bottom: 6vw;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: calc(100% - 1px);
+                        left: 50%;
+                        translate: -50%;
+                        width: calc(100% + 2em);
+                        aspect-ratio: 8;
+                        background-color: $base-pink;
+                        clip-path: polygon(0 0, 100% 0, 50% 100%);
+                    }
+                }
+                .point {
+                    @include FuturaHeavyOblique;
+                    font-size: FZ(48);
+                    @include sp {
+                        font-size: FZ(42);
+                    }
+                    &::after {
+                        content: "p";
+                        font-size: 0.66em;
+                        margin-left: 0.1em;
+                    }
+                }
+                &:last-of-type {
+                    .point {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: calc(100% - 0.15em);
+                            bottom: 0.5em;
+                            width: 0.85em;
+                            background: url("../images/object-hight-light.webp")
+                                no-repeat center center / contain;
+                            aspect-ratio: 41/52;
+                            animation: twinkle 1s ease infinite;
+                        }
+                        @keyframes twinkle {
+                            0% {
+                                opacity: 0;
+                            }
+                            49% {
+                                opacity: 0;
+                            }
+                            50% {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .textBottom {
+            font-size: FZ(40);
+            font-weight: 700;
+            margin-top: 0.5em;
+            @include sp {
+                font-size: FZ(30);
             }
         }
     }
+}
+
+/* =================================
+ * キャストリスト
+ * ------------------------------ */
+.containerCast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 2vw 0;
+    overflow: hidden;
+    @include sp {
+        padding: 8vw 4vw 6vw;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -20em;
+        left: 85%;
+        width: 25vw;
+        background: url("../images/object-wing.webp") no-repeat center center /
+            contain;
+        aspect-ratio: 600/1354;
+        scale: -1 -1;
+        z-index: 1;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: $articleMaxWidth;
+        margin-bottom: 8em;
+        @include sp {
+            margin-bottom: 4vw;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 90%;
+            width: 24vw;
+            background: url("../images/object-feather.webp") no-repeat center
+                center/contain;
+            aspect-ratio: 300/269;
+            scale: -1 -1;
+            rotate: -90deg;
+            @include sp {
+                right: 80%;
+                bottom: -6vw;
+            }
+        }
+        .announce {
+            font-size: FZ(24);
+            line-height: 1.8em;
+            font-weight: 700;
+            @include sp {
+                font-size: FZ(18);
+            }
+        }
+        .boxArea {
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 2em;
+            @include sp {
+                margin-top: 6vw;
+            }
+            h2 {
+                background-color: $base-white;
+                color: $base-black;
+                padding: 0.3em 1em;
+                font-size: FZ(16);
+                font-weight: 600;
+                letter-spacing: 0.08em;
+                @include sp {
+                    font-size: FZ(18);
+                }
+            }
+            ul {
+                position: relative;
+                font-size: inherit;
+                margin: 1em 0 3em;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2em 0.8em;
+                @include sp {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 8vw 2vw;
+                    margin: 2vw 0 6vw;
+                }
+                li {
+                    font-size: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    --shop-color: #000;
+                    .itemImage {
+                        width: 100%;
+                        img {
+                            width: 100%;
+                            aspect-ratio: 3/4;
+                            object-fit: cover;
+                        }
+                    }
+                    .shop {
+                        color: $base-white;
+                        text-align: center;
+                        font-size: FZ(14);
+                        font-weight: 500;
+                        letter-spacing: 0.04em;
+                        padding-block: 0.3em;
+                        background-color: var(--shop-color);
+                    }
+                    .name {
+                        font-size: FZ(20);
+                        font-weight: 700;
+                        text-align: center;
+                        letter-spacing: 0.08em;
+                        margin-top: 0.5em;
+                    }
+                    .itemLink {
+                        align-self: center;
+                        background-color: $base-pink;
+                        font-size: FZ(16);
+                        font-weight: 700;
+                        letter-spacing: 0.08em;
+                        padding: 0.3em 1.6em;
+                        border-radius: 100vmax;
+                        margin-top: 0.2em;
+                    }
+                    &.fuHot {
+                        --shop-color: #00afd1;
+                    }
+                    &.fuVilla {
+                        --shop-color: #b6659f;
+                    }
+                    &.kmHot {
+                        --shop-color: #ea524f;
+                    }
+                    &.kmVilla {
+                        --shop-color: #ffb020;
+                    }
+                }
+            }
+        }
+    }
+}
+.copyright {
+    display: inline-block;
+    text-align: center;
+    background-color: $base-pink;
+    font-size: FZ(16);
+    font-weight: 580;
+    letter-spacing: 0.04em;
+    padding-block: 0.3em;
+    z-index: 2;
 }

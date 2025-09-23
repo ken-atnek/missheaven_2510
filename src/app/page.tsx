@@ -1,5 +1,5 @@
 /* =======================================
- * リタワーク TOPページ
+ * ミスヘブン総選挙応援キャンペーン TOPページ
  * URL: /app/page.tsx
  * Created: 2025-08-26
  * Last updated: 2025-08-26
@@ -7,30 +7,24 @@
 
 import type { Metadata } from 'next';
 import { isRealProduction } from '@/lib/env';
-import ContainerTopHero from '@/components/Top/ContainerHero';
-import ContainerTopSearch from '@/components/Top/ContainerSearch';
-import ContainerTopMessage from '@/components/Top/ContainerMessage';
-import ContainerTopPickUp from '@/components/Top/ContainerPickUp';
-import ContainerTopConditions from '@/components/Top/ContainerConditions';
-import ContainerTopTips from '@/components/Top/ContainerTips';
+import ContainerHead from '@/components/PageTop/ContainerHead';
+import ContainerPoint from '@/components/PageTop/ContainerPoint';
+import ContainerCast from '@/components/PageTop/ContainerCast';
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: 'リタワーク',
+    title: '2025年ミスヘブン総選挙応援キャンペーン',
     description: isRealProduction
-      ? 'リタワークのディスクリプション'
+      ? '2025年ミスヘブン総選挙応援キャンペーンのディスクリプション'
       : undefined,
   };
 };
-export default function Home() {
+export default function PageTop() {
   return (
     <>
-      <ContainerTopHero />
-      <ContainerTopSearch />
-      <ContainerTopPickUp />
-      <ContainerTopConditions />
-      <ContainerTopTips />
-      <ContainerTopMessage />
+      <ContainerHead />
+      <ContainerPoint />
+      <ContainerCast />
     </>
   );
 }

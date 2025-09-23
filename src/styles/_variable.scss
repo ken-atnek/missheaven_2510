@@ -2,7 +2,7 @@
  * 	ウィンドウ・フォントサイズ設定
  * ------------------------------ */
 // MAX-WIDTH宣言
-$M-width: 1024;
+$M-width: 1366;
 $PcMaxWidth: calc($M-width * 1px);
 
 // フォントサイズ(mx1000)
@@ -24,11 +24,22 @@ $base-vw: calc($tilt * 100);
     }
 }
 
-$articleMaxWidth: 1158px;
+$articleMaxWidth: 960px;
 
 /* =================================
  * フォント設定
  * ------------------------------ */
+@font-face {
+    font-family: FuturaHeavyOblique;
+    src: url("/fonts/FuturaHeavyOblique.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin FuturaHeavyOblique {
+    font-family: FuturaHeavyOblique, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* フォント設定 */
 @mixin SunSerif {
@@ -51,9 +62,10 @@ $articleMaxWidth: 1158px;
  * カラー変数
  * ------------------------------ */
 
-$base-white: #fffbf4;
+$base-black: #0c0c0c;
+$base-white: #f6f6f6;
+$base-pink: #e5009f;
 $bg-white: #fef4e5;
-$main-black: #574232;
 $font-black: #726b62;
 $main-orange: #f29400;
 $sub-orange: #ffcd39;
@@ -68,7 +80,6 @@ $radius14: 0.875em;
 $radius24: 1.5em;
 $radius40: 2.5em;
 $radius80: 5em;
-
 @mixin top-radius($radius: $radius14) {
     border-top-left-radius: $radius;
     border-top-right-radius: $radius;

@@ -1,0 +1,101 @@
+[
+  {
+    "castName": "春風こうめ",
+    "area": "fukuoka",
+    "shop": "fuHot",
+    "castImage": "/images/cast/fu_hot_koume.webp",
+    "castUrl": "https://www.cityheaven.net/fukuoka/A4001/A400102/hotpoint/girlid-32583000/"
+  },
+  {
+    "castName": "宇野つかさ",
+    "area": "fukuoka",
+    "shop": "fuVilla",
+    "castImage": "/images/cast/fu_villa_tsukasa.webp",
+    "castUrl": "https://www.cityheaven.net/fukuoka/A4001/A400102/hp_villa/girlid-46422180/"
+  },
+
+  {
+    "castName": "サラ",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_sara.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-129123/"
+  },
+  {
+    "castName": "星川美桜",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_mio.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-48601724/"
+  },
+  {
+    "castName": "神埼あんり",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_anri.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-31297916/"
+  },
+  {
+    "castName": "春野蘭",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_ran.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-25548911/"
+  },
+  {
+    "castName": "藤咲ゆあ",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_yua.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-48600993/"
+  },
+  {
+    "castName": "坂下さや",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_saya.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-7255661/"
+  },
+  {
+    "castName": "藤田せな",
+    "area": "kumamoto",
+    "shop": "kmVilla",
+    "castImage": "/images/cast/km_villa_sena.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-19272843/"
+  },
+  {
+    "castName": "りほ",
+    "area": "kumamoto",
+    "shop": "kmVilla",
+    "castImage": "/images/cast/km_villa_riho.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-53773698/"
+  },
+  {
+    "castName": "神代くれな",
+    "area": "kumamoto",
+    "shop": "kmVilla",
+    "castImage": "/images/cast/km_villa_kurena.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-56667072/"
+  },
+  {
+    "castName": "甘露寺みつ",
+    "area": "kumamoto",
+    "shop": "kmVilla",
+    "castImage": "/images/cast/km_villa_mitsu.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-61119083/"
+  },
+  {
+    "castName": "桃色めい",
+    "area": "kumamoto",
+    "shop": "kmVilla",
+    "castImage": "/images/cast/km_villa_mei.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-60248158/"
+  },
+  {
+    "castName": "愛原のん",
+    "area": "kumamoto",
+    "shop": "kmVilla",
+    "castImage": "/images/cast/km_villa_non.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-36702207/"
+  }
+]

@@ -70,7 +70,7 @@ const ContainerHead = () => {
           </div>
           <div className={styles.boxDetails}>
             <ExternalLink
-              href="https://www.cityheaven.net/kumamoto/AEHenshubuOshirase"
+              href="https://img.cityheaven.net/img/cms/pdf/missheaven2025_touhyou.jpg"
               className={styles.itemQr}
             >
               <Image src={ImageQr} alt="QRコード" />
@@ -81,13 +81,13 @@ const ContainerHead = () => {
                 <span>
                   <time dateTime="2025-10-28">
                     <i className={styles.month}>10</i>
-                    <i className={styles.day}>28</i>
-                    <i className={styles.week}>火</i>
+                    <i className={styles.day}>16</i>
+                    <i className={styles.week}>木</i>
                   </time>
                   <i className={styles.lastText}>までに</i>
                 </span>
               </p>
-              <ExternalLink href="https://www.cityheaven.net/kumamoto/AEHenshubuOshirase">
+              <ExternalLink href="https://img.cityheaven.net/img/cms/pdf/missheaven2025_touhyou.jpg">
                 投票チケット
               </ExternalLink>
               <p>を獲得してください</p>

@@ -65,10 +65,12 @@ $articleMaxWidth: 960px;
 $base-black: #0c0c0c;
 $base-white: #f6f6f6;
 $base-pink: #e5009f;
+$caution-red: #f00;
+$caution-yellow: #b9ff48;
+$sub-orange: #ffcd39;
 $bg-white: #fef4e5;
 $font-black: #726b62;
 $main-orange: #f29400;
-$sub-orange: #ffcd39;
 $color-orange: "f29400";
 
 /* =================================
@@ -95,7 +97,7 @@ $radius80: 5em;
 $tbw: 1194px;
 $tb: 834px;
 $spw: 928px;
-$sp: 480px;
+$sp: 500px;
 
 // PCサイズのみ
 @mixin pc {

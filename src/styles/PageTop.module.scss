@@ -241,10 +241,39 @@
                     }
                 }
                 dd {
+                    position: relative;
                     grid-column: span 2;
                     display: grid;
                     grid-template-columns: subgrid;
                     font-size: inherit;
+                    .caution {
+                        position: absolute;
+                        inset: 0;
+                        margin: auto;
+                        @include flex-center;
+                        z-index: 5;
+                        font-size: inherit;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: calc(100% + 0.1em);
+                            height: 6px;
+                            translate: -50% -50%;
+                            background-color: $caution-red;
+                            z-index: -1;
+                            rotate: -5deg;
+                        }
+                        span {
+                            font-size: FZ(20);
+                            font-weight: 700;
+                            background-color: $caution-red;
+                            padding: 0.5em 1em;
+                            color: $caution-yellow;
+                            border-radius: 8px;
+                        }
+                    }
                     time {
                         position: relative;
                         font-size: inherit;
@@ -341,19 +370,53 @@
             font-size: inherit;
             flex: 1;
             gap: 1em;
-            .itemQr {
-                font-size: inherit;
-                width: 9.125em;
-                @include sp {
-                    display: none;
-                }
-            }
+
+            // .itemQr {
+            //     font-size: inherit;
+            //     width: 9.125em;
+            //     @include sp {
+            //         display: none;
+            //     }
+            // }
             .wrapAnnounce {
+                position: relative;
                 display: flex;
                 flex-direction: column;
                 font-size: inherit;
+                grid-column: span 2;
+                width: 60%;
                 @include sp {
                     grid-column: span 2;
+                    width: 80%;
+                    justify-self: center;
+                }
+                .caution {
+                    position: absolute;
+                    inset: 0;
+                    margin: auto;
+                    @include flex-center;
+                    z-index: 5;
+                    font-size: inherit;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: calc(100% + 2em);
+                        height: 10px;
+                        translate: -50% -50%;
+                        background-color: $caution-red;
+                        z-index: -1;
+                        rotate: -25deg;
+                    }
+                    span {
+                        font-size: FZ(20);
+                        font-weight: 700;
+                        background-color: $caution-red;
+                        padding: 0.5em 1em;
+                        color: $caution-yellow;
+                        border-radius: 8px;
+                    }
                 }
                 p {
                     font-weight: 700;
@@ -361,6 +424,7 @@
                     flex-direction: column;
                     font-size: inherit;
                     letter-spacing: 0.08em;
+                    opacity: 0.6;
                     @include sp {
                         flex-direction: row;
                         justify-content: center;
@@ -417,6 +481,7 @@
                     letter-spacing: 0.08em;
                     margin-bottom: 0.3em;
                     z-index: 2;
+                    opacity: 0.6;
                     @include sp {
                         width: 100%;
                         text-align: center;

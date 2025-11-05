@@ -40,6 +40,9 @@ const ContainerHead = () => {
             <dl>
               <dt>地方予選</dt>
               <dd>
+                <div className={styles.caution}>
+                  <span>終了しました</span>
+                </div>
                 <time dateTime="2025-10-28">
                   <span className={styles.month}>10</span>
                   <span className={styles.day}>28</span>
@@ -69,13 +72,16 @@ const ContainerHead = () => {
             </dl>
           </div>
           <div className={styles.boxDetails}>
-            <ExternalLink
+            {/* <ExternalLink
               href="https://img.cityheaven.net/img/cms/pdf/missheaven2025_touhyou.jpg"
               className={styles.itemQr}
             >
               <Image src={ImageQr} alt="QRコード" />
-            </ExternalLink>
+            </ExternalLink> */}
             <div className={styles.wrapAnnounce}>
+              <div className={styles.caution}>
+                <span>獲得期間は終了しました</span>
+              </div>
               <p>
                 <span>まずは</span>
                 <span>
@@ -93,11 +99,12 @@ const ContainerHead = () => {
               <p>を獲得してください</p>
             </div>
             <ul>
-              <li>・投票チケットの取得方法</li>
-              <li className={styles.mobile}>
-                ・イベントの詳細はQRよりご確認ください
+              <li>
+                ・地方予選時に獲得した投票チケットは再度、本選でも利用出来ます。
               </li>
-              <li>・獲得したチケットは再度本選でもご利用いただけます</li>
+              <li>
+                ・ポイントの付与はブロック本選終了後（11/25以降）となります。
+              </li>
             </ul>
           </div>
         </article>

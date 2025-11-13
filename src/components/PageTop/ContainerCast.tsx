@@ -16,6 +16,8 @@ type Cast = {
   area: string;
   shop: string;
   castImage: string;
+  iconImage01?: string;
+  iconImage02?: string;
   castUrl: string;
 };
 
@@ -62,7 +64,7 @@ const ContainerCast = () => {
           {Object.entries(areaGroups).map(([area, casts]) => (
             <div key={area} className={styles.boxArea}>
               <h2>{AREA_LABELS[area] || area}エリア</h2>
-              <ul>
+              <ul className={styles.listCast}>
                 {casts.map((cast) => (
                   <li key={cast.castName} className={styles[cast.shop]}>
                     <ExternalLink
@@ -72,9 +74,34 @@ const ContainerCast = () => {
                       <Image
                         src={cast.castImage}
                         alt={cast.castName}
+                        className={styles.castImage}
                         width={120}
                         height={160}
                       />
+                      {(cast.iconImage01 || cast.iconImage02) && (
+                        <ul className={styles.iconImage}>
+                          {cast.iconImage01 && (
+                            <li>
+                              <Image
+                                src={cast.iconImage01}
+                                alt={`${cast.castName} icon 1`}
+                                width={24} // 適切なサイズに調整してください
+                                height={24}
+                              />
+                            </li>
+                          )}
+                          {cast.iconImage02 && (
+                            <li>
+                              <Image
+                                src={cast.iconImage02}
+                                alt={`${cast.castName} icon 2`}
+                                width={24} // 適切なサイズに調整してください
+                                height={24}
+                              />
+                            </li>
+                          )}
+                        </ul>
+                      )}
                     </ExternalLink>
                     <div className={styles.shop}>
                       {SHOP_LABELS[cast.shop] || cast.shop}

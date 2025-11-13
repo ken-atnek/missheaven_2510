@@ -19,6 +19,7 @@
     "area": "kumamoto",
     "shop": "kmHot",
     "castImage": "/images/cast/km_hot_sara.webp",
+    "iconImage01": "/images/cast/icon/sara01.webp",
     "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-129123/"
   },
   {
@@ -33,6 +34,7 @@
     "area": "kumamoto",
     "shop": "kmHot",
     "castImage": "/images/cast/km_hot_anri.webp",
+    "iconImage01": "/images/cast/icon/anri01.webp",
     "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-31297916/"
   },
   {
@@ -47,6 +49,8 @@
     "area": "kumamoto",
     "shop": "kmHot",
     "castImage": "/images/cast/km_hot_yua.webp",
+    "iconImage01": "/images/cast/icon/fujisaki02.webp",
+    "iconImage02": "/images/cast/icon/fujisaki01.webp",
     "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-48600993/"
   },
   {
@@ -54,6 +58,7 @@
     "area": "kumamoto",
     "shop": "kmHot",
     "castImage": "/images/cast/km_hot_saya.webp",
+    "iconImage01": "/images/cast/icon/saya01.webp",
     "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-7255661/"
   },
   {
@@ -68,6 +73,8 @@
     "area": "kumamoto",
     "shop": "kmVilla",
     "castImage": "/images/cast/km_villa_riho.webp",
+    "iconImage01": "/images/cast/icon/riho01.webp",
+    "iconImage02": "/images/cast/icon/riho02.webp",
     "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-53773698/"
   },
   {
@@ -75,6 +82,7 @@
     "area": "kumamoto",
     "shop": "kmVilla",
     "castImage": "/images/cast/km_villa_kurena.webp",
+    "iconImage01": "/images/cast/icon/kurena01.webp",
     "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-56667072/"
   },
   {
@@ -82,6 +90,7 @@
     "area": "kumamoto",
     "shop": "kmVilla",
     "castImage": "/images/cast/km_villa_mitsu.webp",
+    "iconImage01": "/images/cast/icon/mitsu01.webp",
     "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-61119083/"
   },
   {
@@ -89,6 +98,7 @@
     "area": "kumamoto",
     "shop": "kmVilla",
     "castImage": "/images/cast/km_villa_mei.webp",
+    "iconImage01": "/images/cast/icon/mei01.webp",
     "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-60248158/"
   },
   {

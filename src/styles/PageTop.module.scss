@@ -70,6 +70,18 @@
         }
         .titleImage {
             width: 100%;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 35%;
+                width: 25%;
+                z-index: -1;
+                background: url("../images/honsen-icon.webp") no-repeat center
+                    center / contain;
+                aspect-ratio: 894/848;
+            }
         }
         .headTitle {
             font-size: FZ(64);
@@ -776,12 +788,12 @@
                     font-size: FZ(18);
                 }
             }
-            ul {
+            .listCast {
                 position: relative;
                 font-size: inherit;
                 margin: 1em 0 3em;
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 2em 0.8em;
                 @include sp {
                     grid-template-columns: repeat(2, 1fr);
@@ -795,10 +807,56 @@
                     --shop-color: #000;
                     .itemImage {
                         width: 100%;
-                        img {
+                        position: relative;
+
+                        // &::before {
+                        //     content: "";
+                        //     position: absolute;
+                        //     inset: 0;
+                        //     background: url(../images/image-frame.webp)
+                        //         no-repeat center center/cover;
+                        // }
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            right: 1rem;
+                            bottom: 1rem;
+                            width: 8rem;
+                            background: url("../images/flame-icon.webp") no-repeat
+                                center center/cover;
+                            aspect-ratio: 240/432;
+                            z-index: 2;
+                            @include sp {
+                                width: 14vw;
+                                right: 2vw;
+                                bottom: 2vw;
+                            }
+                        }
+                        .castImage {
                             width: 100%;
                             aspect-ratio: 3/4;
                             object-fit: cover;
+                        }
+                        .iconImage {
+                            position: absolute;
+                            bottom: 1rem;
+                            left: 0.5rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem 0;
+                            @include sp {
+                                gap: 2vw 0;
+                                bottom: 2vw;
+                            }
+                            li {
+                                width: 9rem;
+                                @include sp {
+                                    width: 16vw;
+                                }
+                                img {
+                                    width: 100%;
+                                }
+                            }
                         }
                     }
                     .shop {

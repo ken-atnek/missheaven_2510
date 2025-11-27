@@ -93,438 +93,479 @@
             gap: 0.1em;
             margin-top: 0.5em;
             @include sp {
-                font-size: FZ(48);
+                font-size: FZ(30);
             }
             span {
                 font-size: 0.375em;
                 font-weight: 500;
                 letter-spacing: 0.2em;
-            }
-        }
-        .boxPoint {
-            position: relative;
-            font-size: inherit;
-            margin-top: 2em;
-            @include sp {
-                margin-top: 30vw;
-            }
-            .number {
-                position: relative;
-                @include FuturaHeavyOblique;
-                font-size: FZ(140);
-                display: inline-block;
-                background: linear-gradient(
-                    0deg,
-                    #ffe500 0%,
-                    rgba(#ffe500, 0) 80%,
-                    rgba(#ffe500, 0) 100%
-                );
-                background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-color: $base-white;
                 @include sp {
-                    font-size: FZ(90);
-                }
-                &::after {
-                    content: "pt";
-                    font-size: 0.343em;
-                    color: $base-white;
-                    -webkit-text-fill-color: $base-white; // Safari対策
-                    background-clip: none;
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    translate: 0 -50%;
-                    left: calc(100% - 0.2em);
-                    width: 1.6em;
-                    @include svg-text-get("E5009F");
-                    @include sp {
-                        width: 0.9em;
-                    }
-                }
-            }
-            .wrapHead {
-                font-size: inherit;
-                position: absolute;
-                top: 45%;
-                translate: 0 -50%;
-                right: calc(100% + 0.1em);
-                width: 11em;
-                aspect-ratio: 1;
-                @include flex-center;
-                @include sp {
-                    top: unset;
-                    left: 50%;
-                    translate: -50%;
-                    bottom: calc(100% - 8vw);
-                    width: 25vw;
-                    z-index: -1;
-                }
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 50%;
-                    translate: -50%;
-                    top: -3.2em;
-                    background: url("../images/object-crown.webp") no-repeat
-                        center center / contain;
-                    aspect-ratio: 91/105;
-                    width: 50%;
-                    @include sp {
-                        width: 70%;
-                    }
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    inset: 0;
-                    background-color: $base-pink;
-                    mix-blend-mode: screen;
-                    opacity: 0.6;
-                    border-radius: 50%;
-                }
-                span {
-                    font-size: FZ(48);
-                    font-weight: 700;
-                    @include sp {
-                        font-size: FZ(30);
-                    }
+                    font-size: 0.6em;
                 }
             }
         }
+
+        // .boxPoint {
+        //     position: relative;
+        //     font-size: inherit;
+        //     margin-top: 2em;
+        //     @include sp {
+        //         margin-top: 30vw;
+        //     }
+        //     .number {
+        //         position: relative;
+        //         @include FuturaHeavyOblique;
+        //         font-size: FZ(140);
+        //         display: inline-block;
+        //         background: linear-gradient(
+        //             0deg,
+        //             #ffe500 0%,
+        //             rgba(#ffe500, 0) 80%,
+        //             rgba(#ffe500, 0) 100%
+        //         );
+        //         background-clip: text;
+        //         -webkit-text-fill-color: transparent;
+        //         background-color: $base-white;
+        //         @include sp {
+        //             font-size: FZ(90);
+        //         }
+        //         &::after {
+        //             content: "pt";
+        //             font-size: 0.343em;
+        //             color: $base-white;
+        //             -webkit-text-fill-color: $base-white; // Safari対策
+        //             background-clip: none;
+        //         }
+        //         &::before {
+        //             content: "";
+        //             position: absolute;
+        //             top: 50%;
+        //             translate: 0 -50%;
+        //             left: calc(100% - 0.2em);
+        //             width: 1.6em;
+        //             @include svg-text-get("E5009F");
+        //             @include sp {
+        //                 width: 0.9em;
+        //             }
+        //         }
+        //     }
+        //     .wrapHead {
+        //         font-size: inherit;
+        //         position: absolute;
+        //         top: 45%;
+        //         translate: 0 -50%;
+        //         right: calc(100% + 0.1em);
+        //         width: 11em;
+        //         aspect-ratio: 1;
+        //         @include flex-center;
+        //         @include sp {
+        //             top: unset;
+        //             left: 50%;
+        //             translate: -50%;
+        //             bottom: calc(100% - 8vw);
+        //             width: 25vw;
+        //             z-index: -1;
+        //         }
+        //         &::after {
+        //             content: "";
+        //             position: absolute;
+        //             left: 50%;
+        //             translate: -50%;
+        //             top: -3.2em;
+        //             background: url("../images/object-crown.webp") no-repeat
+        //                 center center / contain;
+        //             aspect-ratio: 91/105;
+        //             width: 50%;
+        //             @include sp {
+        //                 width: 70%;
+        //             }
+        //         }
+        //         &::before {
+        //             content: "";
+        //             position: absolute;
+        //             inset: 0;
+        //             background-color: $base-pink;
+        //             mix-blend-mode: screen;
+        //             opacity: 0.6;
+        //             border-radius: 50%;
+        //         }
+        //         span {
+        //             font-size: FZ(48);
+        //             font-weight: 700;
+        //             @include sp {
+        //                 font-size: FZ(30);
+        //             }
+        //         }
+        //     }
+        // }
         .textChance {
-            font-size: FZ(36);
-            font-weight: 700;
+            font-size: FZ(30);
+            font-weight: 500;
             letter-spacing: 0.08em;
             display: inline-block;
-            translate: 0 -0.8em;
-            margin-bottom: -0.8em;
+            margin-top: 2em;
+            text-align: center;
+            @include sp {
+                font-size: FZ(16);
+                margin-top: 4vw;
+            }
             em {
-                font-size: 1.78em;
-                display: inline-block;
-                translate: 0 0.05em;
-                margin-inline: 0.1em;
+                font-size: 1.4em;
+                font-weight: 700;
+                color: #fbe625;
+                @include sp {
+                    font-size: 1.8em;
+                }
+            }
+        }
+        .textThanks {
+            font-size: FZ(18);
+            font-weight: 600;
+            margin-top: 1em;
+            letter-spacing: 0.08em;
+            @include sp {
+                font-size: FZ(16);
+                text-align: center;
             }
         }
     }
     .blockBottom {
-        flex-direction: row;
+        flex-direction: column;
         gap: 0 1.4em;
         margin-top: 3em;
         @include sp {
             flex-direction: column;
             gap: 6vw 0;
+            margin-top: 6vw;
         }
-        .boxPeriod {
-            font-size: inherit;
-            display: flex;
-            flex-direction: column;
-            background-color: rgba($base-black, 0.6);
-            border: 1px solid;
-            border-radius: 1rem;
-            padding: 2em 2em 1em;
-            gap: 1em 0;
-            @include sp {
-                padding: 4vw 4vw 2vw;
-                width: 100%;
-            }
-            h2 {
-                align-self: center;
-                font-size: FZ(20);
-                font-weight: 700;
-                letter-spacing: 0.4em;
-            }
-            dl {
-                display: grid;
-                grid-template-columns: auto 1fr;
-                font-size: inherit;
-                gap: 0.5em 0;
-                dt {
-                    grid-column: span 2;
-                    background-color: $base-white;
-                    color: $base-black;
-                    font-size: FZ(16);
-                    font-weight: 700;
-                    padding: 0.5em 1em;
-                    @include sp {
-                        padding: 0.3em 4vw;
-                    }
-                }
-                dd {
-                    position: relative;
-                    grid-column: span 2;
-                    display: grid;
-                    grid-template-columns: subgrid;
-                    font-size: inherit;
-                    .caution {
-                        position: absolute;
-                        inset: 0;
-                        margin: auto;
-                        @include flex-center;
-                        z-index: 5;
-                        font-size: inherit;
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            top: 50%;
-                            left: 50%;
-                            width: calc(100% + 0.1em);
-                            height: 6px;
-                            translate: -50% -50%;
-                            background-color: $caution-red;
-                            z-index: -1;
-                            rotate: -5deg;
-                        }
-                        span {
-                            font-size: FZ(20);
-                            font-weight: 700;
-                            background-color: $caution-red;
-                            padding: 0.5em 1em;
-                            color: $caution-yellow;
-                            border-radius: 8px;
-                        }
-                    }
-                    time {
-                        position: relative;
-                        font-size: inherit;
-                        display: flex;
-                        .month,
-                        .day {
-                            font-size: FZ(40);
-                            font-weight: 700;
-                            @include sp {
-                                font-size: FZ(36);
-                            }
-                        }
-                        .month {
-                            &::after {
-                                content: "月";
-                                font-size: 0.4em;
-                            }
-                        }
-                        .day {
-                            &::after {
-                                content: "日";
-                                font-size: 0.4em;
-                            }
-                        }
-                        .week {
-                            background-color: $base-white;
-                            color: $base-black;
-                            font-size: FZ(16);
-                            align-self: center;
-                            display: inline-block;
-                            padding: 0.2em;
-                            border-radius: 5px;
-                            font-weight: 700;
-                            margin-left: 0.2em;
-                            @include sp {
-                                font-size: FZ(14);
-                            }
-                        }
-                        .time {
-                            font-size: FZ(16);
-                            font-weight: 500;
-                            color: #fff9ba;
-                            align-self: center;
-                            letter-spacing: 0.12em;
-                            margin-left: 0.5em;
-                            display: inline-block;
-                            translate: 0 0.3em;
-                            @include sp {
-                                font-size: FZ(14);
-                                letter-spacing: 0.04em;
-                                translate: unset;
-                            }
-                            &::before {
-                                content: "[";
-                            }
-                            &::after {
-                                content: "~]";
-                            }
-                        }
-                        &:nth-of-type(2) {
-                            flex: 1;
-                            display: flex;
-                            justify-content: space-between;
-                            margin-left: 3em;
-                            @include sp {
-                                margin-left: 6vw;
-                            }
-                            &::before {
-                                content: "";
-                                position: absolute;
-                                top: 50%;
-                                translate: 0 -50%;
-                                right: calc(100% + 0.7em);
-                                width: 1.5em;
-                                height: 2px;
-                                background-color: $base-white;
-                                @include sp {
-                                    width: 2vw;
-                                    right: calc(100% + 2vw);
-                                }
-                            }
-                            .day {
-                                margin-left: auto;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        .boxDetails {
-            position: relative;
-            display: grid;
-            grid-template-columns: auto 1fr;
-            font-size: inherit;
-            flex: 1;
-            gap: 1em;
 
-            // .itemQr {
-            //     font-size: inherit;
-            //     width: 9.125em;
-            //     @include sp {
-            //         display: none;
-            //     }
-            // }
-            .wrapAnnounce {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                font-size: inherit;
-                grid-column: span 2;
-                width: 60%;
-                @include sp {
-                    grid-column: span 2;
-                    width: 80%;
-                    justify-self: center;
-                }
-                .caution {
-                    position: absolute;
-                    inset: 0;
-                    margin: auto;
-                    @include flex-center;
-                    z-index: 5;
-                    font-size: inherit;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        width: calc(100% + 2em);
-                        height: 10px;
-                        translate: -50% -50%;
-                        background-color: $caution-red;
-                        z-index: -1;
-                        rotate: -25deg;
-                    }
-                    span {
-                        font-size: FZ(20);
-                        font-weight: 700;
-                        background-color: $caution-red;
-                        padding: 0.5em 1em;
-                        color: $caution-yellow;
-                        border-radius: 8px;
-                    }
-                }
-                p {
-                    font-weight: 700;
-                    display: flex;
-                    flex-direction: column;
-                    font-size: inherit;
-                    letter-spacing: 0.08em;
-                    opacity: 0.6;
-                    @include sp {
-                        flex-direction: row;
-                        justify-content: center;
-                    }
-                    span {
-                        font-size: FZ(16);
-                        display: flex;
-                        align-items: center;
-                        .lastText {
-                            display: inline-block;
-                            translate: 0 0.3em;
-                        }
-                        time {
-                            position: relative;
-                            font-size: inherit;
-                            display: flex;
-                            margin-right: 0.5em;
-                            .month {
-                                font-size: FZ(40);
-                                font-weight: 700;
-                                &::after {
-                                    content: "月";
-                                    font-size: 0.4em;
-                                }
-                            }
-                            .day {
-                                font-size: FZ(40);
-                                font-weight: 700;
-                                &::after {
-                                    content: "日";
-                                    font-size: 0.4em;
-                                }
-                            }
-                            .week {
-                                background-color: $base-white;
-                                color: $base-black;
-                                font-size: FZ(16);
-                                align-self: center;
-                                display: inline-block;
-                                padding: 0.2em;
-                                border-radius: 5px;
-                                font-weight: 700;
-                                margin-left: 0.2em;
-                            }
-                        }
-                    }
-                }
-                a {
-                    align-self: flex-start;
-                    font-size: FZ(20);
-                    font-weight: 700;
-                    padding: 0.5em 2em;
-                    position: relative;
-                    letter-spacing: 0.08em;
-                    margin-bottom: 0.3em;
-                    z-index: 2;
-                    opacity: 0.6;
-                    @include sp {
-                        width: 100%;
-                        text-align: center;
-                        padding: 0.8em 2em;
-                    }
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        inset: 0;
-                        background-color: rgba($base-pink, 1);
-                        z-index: -1;
-                        mix-blend-mode: screen;
-                        border-radius: 1rem;
-                    }
-                }
+        // .boxPeriod {
+        //     font-size: inherit;
+        //     display: flex;
+        //     flex-direction: column;
+        //     background-color: rgba($base-black, 0.6);
+        //     border: 1px solid;
+        //     border-radius: 1rem;
+        //     padding: 2em 2em 1em;
+        //     gap: 1em 0;
+        //     @include sp {
+        //         padding: 4vw 4vw 2vw;
+        //         width: 100%;
+        //     }
+        //     h2 {
+        //         align-self: center;
+        //         font-size: FZ(20);
+        //         font-weight: 700;
+        //         letter-spacing: 0.4em;
+        //     }
+        //     dl {
+        //         display: grid;
+        //         grid-template-columns: auto 1fr;
+        //         font-size: inherit;
+        //         gap: 0.5em 0;
+        //         dt {
+        //             grid-column: span 2;
+        //             background-color: $base-white;
+        //             color: $base-black;
+        //             font-size: FZ(16);
+        //             font-weight: 700;
+        //             padding: 0.5em 1em;
+        //             @include sp {
+        //                 padding: 0.3em 4vw;
+        //             }
+        //         }
+        //         dd {
+        //             position: relative;
+        //             grid-column: span 2;
+        //             display: grid;
+        //             grid-template-columns: subgrid;
+        //             font-size: inherit;
+        //             .caution {
+        //                 position: absolute;
+        //                 inset: 0;
+        //                 margin: auto;
+        //                 @include flex-center;
+        //                 z-index: 5;
+        //                 font-size: inherit;
+        //                 &::before {
+        //                     content: "";
+        //                     position: absolute;
+        //                     top: 50%;
+        //                     left: 50%;
+        //                     width: calc(100% + 0.1em);
+        //                     height: 6px;
+        //                     translate: -50% -50%;
+        //                     background-color: $caution-red;
+        //                     z-index: -1;
+        //                     rotate: -5deg;
+        //                 }
+        //                 span {
+        //                     font-size: FZ(20);
+        //                     font-weight: 700;
+        //                     background-color: $caution-red;
+        //                     padding: 0.5em 1em;
+        //                     color: $caution-yellow;
+        //                     border-radius: 8px;
+        //                 }
+        //             }
+        //             time {
+        //                 position: relative;
+        //                 font-size: inherit;
+        //                 display: flex;
+        //                 .month,
+        //                 .day {
+        //                     font-size: FZ(40);
+        //                     font-weight: 700;
+        //                     @include sp {
+        //                         font-size: FZ(36);
+        //                     }
+        //                 }
+        //                 .month {
+        //                     &::after {
+        //                         content: "月";
+        //                         font-size: 0.4em;
+        //                     }
+        //                 }
+        //                 .day {
+        //                     &::after {
+        //                         content: "日";
+        //                         font-size: 0.4em;
+        //                     }
+        //                 }
+        //                 .week {
+        //                     background-color: $base-white;
+        //                     color: $base-black;
+        //                     font-size: FZ(16);
+        //                     align-self: center;
+        //                     display: inline-block;
+        //                     padding: 0.2em;
+        //                     border-radius: 5px;
+        //                     font-weight: 700;
+        //                     margin-left: 0.2em;
+        //                     @include sp {
+        //                         font-size: FZ(14);
+        //                     }
+        //                 }
+        //                 .time {
+        //                     font-size: FZ(16);
+        //                     font-weight: 500;
+        //                     color: #fff9ba;
+        //                     align-self: center;
+        //                     letter-spacing: 0.12em;
+        //                     margin-left: 0.5em;
+        //                     display: inline-block;
+        //                     translate: 0 0.3em;
+        //                     @include sp {
+        //                         font-size: FZ(14);
+        //                         letter-spacing: 0.04em;
+        //                         translate: unset;
+        //                     }
+        //                     &::before {
+        //                         content: "[";
+        //                     }
+        //                     &::after {
+        //                         content: "~]";
+        //                     }
+        //                 }
+        //                 &:nth-of-type(2) {
+        //                     flex: 1;
+        //                     display: flex;
+        //                     justify-content: space-between;
+        //                     margin-left: 3em;
+        //                     @include sp {
+        //                         margin-left: 6vw;
+        //                     }
+        //                     &::before {
+        //                         content: "";
+        //                         position: absolute;
+        //                         top: 50%;
+        //                         translate: 0 -50%;
+        //                         right: calc(100% + 0.7em);
+        //                         width: 1.5em;
+        //                         height: 2px;
+        //                         background-color: $base-white;
+        //                         @include sp {
+        //                             width: 2vw;
+        //                             right: calc(100% + 2vw);
+        //                         }
+        //                     }
+        //                     .day {
+        //                         margin-left: auto;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // .boxDetails {
+        //     position: relative;
+        //     display: grid;
+        //     grid-template-columns: auto 1fr;
+        //     font-size: inherit;
+        //     flex: 1;
+        //     gap: 1em;
+
+        //     // .itemQr {
+        //     //     font-size: inherit;
+        //     //     width: 9.125em;
+        //     //     @include sp {
+        //     //         display: none;
+        //     //     }
+        //     // }
+        //     .wrapAnnounce {
+        //         position: relative;
+        //         display: flex;
+        //         flex-direction: column;
+        //         font-size: inherit;
+        //         grid-column: span 2;
+        //         width: 60%;
+        //         @include sp {
+        //             grid-column: span 2;
+        //             width: 80%;
+        //             justify-self: center;
+        //         }
+        //         .caution {
+        //             position: absolute;
+        //             inset: 0;
+        //             margin: auto;
+        //             @include flex-center;
+        //             z-index: 5;
+        //             font-size: inherit;
+        //             &::before {
+        //                 content: "";
+        //                 position: absolute;
+        //                 top: 50%;
+        //                 left: 50%;
+        //                 width: calc(100% + 2em);
+        //                 height: 10px;
+        //                 translate: -50% -50%;
+        //                 background-color: $caution-red;
+        //                 z-index: -1;
+        //                 rotate: -25deg;
+        //             }
+        //             span {
+        //                 font-size: FZ(20);
+        //                 font-weight: 700;
+        //                 background-color: $caution-red;
+        //                 padding: 0.5em 1em;
+        //                 color: $caution-yellow;
+        //                 border-radius: 8px;
+        //             }
+        //         }
+        //         p {
+        //             font-weight: 700;
+        //             display: flex;
+        //             flex-direction: column;
+        //             font-size: inherit;
+        //             letter-spacing: 0.08em;
+        //             opacity: 0.6;
+        //             @include sp {
+        //                 flex-direction: row;
+        //                 justify-content: center;
+        //             }
+        //             span {
+        //                 font-size: FZ(16);
+        //                 display: flex;
+        //                 align-items: center;
+        //                 .lastText {
+        //                     display: inline-block;
+        //                     translate: 0 0.3em;
+        //                 }
+        //                 time {
+        //                     position: relative;
+        //                     font-size: inherit;
+        //                     display: flex;
+        //                     margin-right: 0.5em;
+        //                     .month {
+        //                         font-size: FZ(40);
+        //                         font-weight: 700;
+        //                         &::after {
+        //                             content: "月";
+        //                             font-size: 0.4em;
+        //                         }
+        //                     }
+        //                     .day {
+        //                         font-size: FZ(40);
+        //                         font-weight: 700;
+        //                         &::after {
+        //                             content: "日";
+        //                             font-size: 0.4em;
+        //                         }
+        //                     }
+        //                     .week {
+        //                         background-color: $base-white;
+        //                         color: $base-black;
+        //                         font-size: FZ(16);
+        //                         align-self: center;
+        //                         display: inline-block;
+        //                         padding: 0.2em;
+        //                         border-radius: 5px;
+        //                         font-weight: 700;
+        //                         margin-left: 0.2em;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //         a {
+        //             align-self: flex-start;
+        //             font-size: FZ(20);
+        //             font-weight: 700;
+        //             padding: 0.5em 2em;
+        //             position: relative;
+        //             letter-spacing: 0.08em;
+        //             margin-bottom: 0.3em;
+        //             z-index: 2;
+        //             opacity: 0.6;
+        //             @include sp {
+        //                 width: 100%;
+        //                 text-align: center;
+        //                 padding: 0.8em 2em;
+        //             }
+        //             &::before {
+        //                 content: "";
+        //                 position: absolute;
+        //                 inset: 0;
+        //                 background-color: rgba($base-pink, 1);
+        //                 z-index: -1;
+        //                 mix-blend-mode: screen;
+        //                 border-radius: 1rem;
+        //             }
+        //         }
+        //     }
+        //     ul {
+        //         grid-column: span 2;
+        //         font-size: inherit;
+        //         display: flex;
+        //         flex-direction: column;
+        //         gap: 0.3em 0;
+        //         li {
+        //             font-size: FZ(16);
+        //             letter-spacing: 0.08em;
+        //             font-weight: 600;
+        //             &.mobile {
+        //                 @include sp {
+        //                     display: none;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        p {
+            font-size: FZ(26);
+            text-align: center;
+            color: #fced65;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            line-height: 1.6em;
+            @include sp {
+                font-size: FZ(20);
             }
-            ul {
-                grid-column: span 2;
-                font-size: inherit;
-                display: flex;
-                flex-direction: column;
-                gap: 0.3em 0;
-                li {
-                    font-size: FZ(16);
-                    letter-spacing: 0.08em;
-                    font-weight: 600;
-                    &.mobile {
-                        @include sp {
-                            display: none;
-                        }
-                    }
+            @include pc {
+                em {
+                    font-size: 1.1em;
+                    margin-inline: 0.3em;
+                    font-weight: 700;
+                    color: #ffe608;
                 }
             }
         }
@@ -559,34 +600,35 @@
             flex-direction: column;
             align-items: center;
             font-size: inherit;
-            span {
-                font-size: FZ(64);
-                font-weight: 700;
-                @include sp {
-                    font-size: FZ(36);
-                }
-                em {
-                    display: inline-block;
-                    font-size: 1.5em;
-                    margin-right: 0.1em;
-                    background: linear-gradient(
-                        0deg,
-                        #ffe500 0%,
-                        rgba(#ffe500, 0) 60%,
-                        rgba(#ffe500, 0) 100%
-                    );
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                    background-color: $base-white;
-                }
-            }
+
+            // span {
+            //     font-size: FZ(64);
+            //     font-weight: 700;
+            //     @include sp {
+            //         font-size: FZ(36);
+            //     }
+            //     em {
+            //         display: inline-block;
+            //         font-size: 1.5em;
+            //         margin-right: 0.1em;
+            //         background: linear-gradient(
+            //             0deg,
+            //             #ffe500 0%,
+            //             rgba(#ffe500, 0) 60%,
+            //             rgba(#ffe500, 0) 100%
+            //         );
+            //         background-clip: text;
+            //         -webkit-text-fill-color: transparent;
+            //         background-color: $base-white;
+            //     }
+            // }
             p {
-                font-size: FZ(36);
+                font-size: FZ(28);
                 font-weight: 700;
                 margin-top: 0.5em;
                 letter-spacing: 0.04em;
                 @include sp {
-                    font-size: FZ(20);
+                    font-size: FZ(14);
                 }
             }
         }
@@ -822,8 +864,8 @@
                             right: 1rem;
                             bottom: 1rem;
                             width: 8rem;
-                            background: url("../images/flame-icon.webp") no-repeat
-                                center center/cover;
+                            background: url("../images/flame-icon.webp")
+                                no-repeat center center/cover;
                             aspect-ratio: 240/432;
                             z-index: 2;
                             @include sp {

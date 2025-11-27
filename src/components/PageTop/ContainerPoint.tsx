@@ -37,10 +37,7 @@ const ContainerPoint = () => {
     <section className={styles.containerPoint}>
       <article>
         <div className={styles.boxHead}>
-          <span>
-            <em>予選・本選</em>共に
-          </span>
-          <p>当グループの女の子に投票すると…?!</p>
+          <p>ポイントプレゼントも始めておりますので、是非ご来店下さい。</p>
         </div>
         <ul className={styles.listPoint}>
           {pointData.map((item, index) => (
@@ -51,7 +48,6 @@ const ContainerPoint = () => {
             </li>
           ))}
         </ul>
-        <p className={styles.textBottom}>をプレゼント！</p>
       </article>
     </section>
   );

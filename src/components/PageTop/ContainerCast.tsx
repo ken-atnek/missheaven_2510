@@ -9,7 +9,7 @@
 import styles from '@/styles/PageTop.module.scss';
 import Image from 'next/image';
 import ExternalLink from '@/components/common/ExternalLink';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 type Cast = {
   castName: string;
@@ -50,74 +50,72 @@ const ContainerCast = () => {
       .then((data) => setCastData(data));
   }, []);
 
-  const areaGroups = groupByArea(castData);
-
+  // castDataが更新されたときだけ再計算
+  const kumamotoCasts = useMemo(() => {
+    const areaGroups = groupByArea(castData);
+    return areaGroups['kumamoto'] || [];
+  }, [castData]);
   return (
     <>
       <section className={styles.containerCast}>
         <article>
-          <p className={styles.announce}>
+          {/* <p className={styles.announce}>
             当グループ九州エリアから{castData.length}名がエントリー!
             <br />
             皆様からの応援・投票よろしくお願いします！
-          </p>
-          {Object.entries(areaGroups).map(([area, casts]) => (
-            <div key={area} className={styles.boxArea}>
-              <h2>{AREA_LABELS[area] || area}エリア</h2>
-              <ul className={styles.listCast}>
-                {casts.map((cast) => (
-                  <li key={cast.castName} className={styles[cast.shop]}>
-                    <ExternalLink
-                      href={cast.castUrl}
-                      className={styles.itemImage}
-                    >
-                      <Image
-                        src={cast.castImage}
-                        alt={cast.castName}
-                        className={styles.castImage}
-                        width={120}
-                        height={160}
-                      />
-                      {(cast.iconImage01 || cast.iconImage02) && (
-                        <ul className={styles.iconImage}>
-                          {cast.iconImage01 && (
-                            <li>
-                              <Image
-                                src={cast.iconImage01}
-                                alt={`${cast.castName} icon 1`}
-                                width={24} // 適切なサイズに調整してください
-                                height={24}
-                              />
-                            </li>
-                          )}
-                          {cast.iconImage02 && (
-                            <li>
-                              <Image
-                                src={cast.iconImage02}
-                                alt={`${cast.castName} icon 2`}
-                                width={24} // 適切なサイズに調整してください
-                                height={24}
-                              />
-                            </li>
-                          )}
-                        </ul>
-                      )}
-                    </ExternalLink>
-                    <div className={styles.shop}>
-                      {SHOP_LABELS[cast.shop] || cast.shop}
-                    </div>
-                    <div className={styles.name}>{cast.castName}</div>
-                    <ExternalLink
-                      href={cast.castUrl}
-                      className={styles.itemLink}
-                    >
-                      CAST PAGE
-                    </ExternalLink>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          </p> */}
+          <div className={styles.boxArea}>
+            <h2>{AREA_LABELS['kumamoto']}エリア</h2>
+            <ul className={styles.listCast}>
+              {kumamotoCasts.map((cast) => (
+                <li key={cast.castName} className={styles[cast.shop]}>
+                  <ExternalLink
+                    href={cast.castUrl}
+                    className={styles.itemImage}
+                  >
+                    <Image
+                      src={cast.castImage}
+                      alt={cast.castName}
+                      className={styles.castImage}
+                      width={120}
+                      height={160}
+                    />
+                    {(cast.iconImage01 || cast.iconImage02) && (
+                      <ul className={styles.iconImage}>
+                        {cast.iconImage01 && (
+                          <li>
+                            <Image
+                              src={cast.iconImage01}
+                              alt={`${cast.castName} icon 1`}
+                              width={24}
+                              height={24}
+                            />
+                          </li>
+                        )}
+                        {cast.iconImage02 && (
+                          <li>
+                            <Image
+                              src={cast.iconImage02}
+                              alt={`${cast.castName} icon 2`}
+                              width={24}
+                              height={24}
+                            />
+                          </li>
+                        )}
+                      </ul>
+                    )}
+                  </ExternalLink>
+                  <div className={styles.shop}>
+                    {SHOP_LABELS[cast.shop] || cast.shop}
+                  </div>
+                  <div className={styles.name}>{cast.castName}</div>
+                  <ExternalLink href={cast.castUrl} className={styles.itemLink}>
+                    CAST PAGE
+                  </ExternalLink>
+                </li>
+              ))}
+            </ul>
+          </div>
         </article>
       </section>
       <div className={styles.copyright}>

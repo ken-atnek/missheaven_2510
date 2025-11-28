@@ -42,12 +42,13 @@ const ContainerHead = () => {
             <br className="sp" />
             12月1日～10日迄の期間中、
             <br />
-            本選進出の12名で遊ばれた
-            <em>
-              全てのお客様に
+            本選進出の12名で遊ばれた 全てのお客様に
+            <span>
+              1000ポイント<i>＋</i>
+              次回利用可能な1000円割引券を
               <br className="sp" />
-              1000ポイントプレゼント！
-            </em>
+              プレゼント！
+            </span>
           </p>
         </article>
       </section>

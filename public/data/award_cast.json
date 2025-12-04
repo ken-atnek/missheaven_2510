@@ -1,0 +1,52 @@
+[
+  {
+    "castName": "藤咲ゆあ",
+    "shop": "kmHot",
+    "category": "japan",
+    "castImage": "/images/cast/km_hot_yua.webp",
+    "iconImage01": "/images/cast/award/fujisaki02.webp",
+    "iconImage02": "/images/cast/award/fujisaki01.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-48600993/"
+  },
+  {
+    "castName": "サラ",
+    "shop": "kmHot",
+    "category": "block",
+    "castImage": "/images/cast/km_hot_sara.webp",
+    "iconImage01": "/images/cast/award/sara01.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-129123/"
+  },
+  {
+    "castName": "神埼あんり",
+    "shop": "kmHot",
+    "category": "block",
+    "castImage": "/images/cast/km_hot_anri.webp",
+    "iconImage01": "/images/cast/award/anri01.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-31297916/"
+  },
+  {
+    "castName": "坂下さや",
+    "shop": "kmHot",
+    "category": "local",
+    "castImage": "/images/cast/km_hot_saya.webp",
+    "iconImage01": "/images/cast/award/saya01.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-7255661/"
+  },
+  {
+    "castName": "星川★美桜",
+    "shop": "kmHot",
+    "category": "local",
+    "castImage": "/images/cast/km_hot_mio.webp",
+    "iconImage01": "/images/cast/award/hoshikawa01.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-48601724/"
+  },
+  {
+    "castName": "りほ",
+    "category": "local",
+    "shop": "kmVilla",
+    "castImage": "/images/cast/km_villa_riho.webp",
+    "iconImage01": "/images/cast/award/riho02.webp",
+    "iconImage02": "/images/cast/award/riho01.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-53773698/"
+  }
+]

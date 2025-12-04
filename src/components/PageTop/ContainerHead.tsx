@@ -8,8 +8,8 @@
 import styles from '@/styles/PageTop.module.scss';
 import Image from 'next/image';
 import TitleLogo from '@/images/title-logo.webp';
-import ImageQr from '@/images/qr.webp';
-import ExternalLink from '@/components/common/ExternalLink';
+// import ImageQr from '@/images/qr.webp';
+// import ExternalLink from '@/components/common/ExternalLink';
 
 const ContainerHead = () => {
   return (

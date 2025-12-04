@@ -10,6 +10,7 @@ import { isRealProduction } from '@/lib/env';
 import ContainerHead from '@/components/PageTop/ContainerHead';
 import ContainerPoint from '@/components/PageTop/ContainerPoint';
 import ContainerCast from '@/components/PageTop/ContainerCast';
+import ContainerAwardCast from '@/components/PageTop/ContainerAwardCast';
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -24,6 +25,7 @@ export default function PageTop() {
     <>
       <ContainerHead />
       <ContainerPoint />
+      <ContainerAwardCast />
       <ContainerCast />
     </>
   );

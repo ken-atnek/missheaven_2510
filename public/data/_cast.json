@@ -15,13 +15,52 @@
   },
 
   {
+    "castName": "サラ",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_sara.webp",
+    "iconImage01": "/images/cast/icon/sara01.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-129123/"
+  },
+  {
+    "castName": "星川★美桜",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_mio.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-48601724/"
+  },
+  {
+    "castName": "神埼あんり",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_anri.webp",
+    "iconImage01": "/images/cast/icon/anri01.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-31297916/"
+  },
+  {
     "castName": "春野蘭",
     "area": "kumamoto",
     "shop": "kmHot",
     "castImage": "/images/cast/km_hot_ran.webp",
     "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-25548911/"
   },
-
+  {
+    "castName": "藤咲ゆあ",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_yua.webp",
+    "iconImage01": "/images/cast/icon/fujisaki02.webp",
+    "iconImage02": "/images/cast/icon/fujisaki01.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-48600993/"
+  },
+  {
+    "castName": "坂下さや",
+    "area": "kumamoto",
+    "shop": "kmHot",
+    "castImage": "/images/cast/km_hot_saya.webp",
+    "iconImage01": "/images/cast/icon/saya01.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/hotpoint/girlid-7255661/"
+  },
   {
     "castName": "藤田せな",
     "area": "kumamoto",
@@ -29,7 +68,15 @@
     "castImage": "/images/cast/km_villa_sena.webp",
     "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-19272843/"
   },
-
+  {
+    "castName": "りほ",
+    "area": "kumamoto",
+    "shop": "kmVilla",
+    "castImage": "/images/cast/km_villa_riho.webp",
+    "iconImage01": "/images/cast/icon/riho01.webp",
+    "iconImage02": "/images/cast/icon/riho02.webp",
+    "castUrl": "https://www.cityheaven.net/kumamoto/A4301/A430101/sere_hp/girlid-53773698/"
+  },
   {
     "castName": "神代くれな",
     "area": "kumamoto",
